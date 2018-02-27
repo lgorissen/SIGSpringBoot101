@@ -17,7 +17,7 @@ This repo contains the labs for the AMIS SIG SpringBoot 101, April 2018
 | 8. REST web service in Oracle ACCS | Run a SpringBoot REST web service in the Oracle Application Container Cloud Service: ACCS |
 
 
-##Requirements:
+## Requirements:
 
 The labs will use the following tooling:
 - Eclipse with STS (eventueel IntelliJ Community Edition)
