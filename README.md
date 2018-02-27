@@ -2,7 +2,7 @@
 This repo contains the labs for the AMIS SIG SpringBoot 101, April 2018
 
 
-##Outline:
+## Outline:
 
 | Lab                                                | Description                                                     |
 |----------------------------------------------------|-----------------------------------------------------------------|
