@@ -1,0 +1,155 @@
+{
+	"info": {
+		"name": "SigSpringBoot101 - lab 1",
+		"_postman_id": "9fe45262-6d7a-4422-92c2-20b00bb3a91d",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get part by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8090/dronebuzzers/part/DB-FK-A250-V4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"dronebuzzers",
+						"part",
+						"DB-FK-A250-V4"
+					]
+				},
+				"description": "get part number 1"
+			},
+			"response": []
+		},
+		{
+			"name": "post Order",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"clientId\" : \"TDF\", \"clientReference\": \"TDF-0067\", \"orderLines\": [{\"id\" : \"DB-FK-A250-V4\", \"count\" : 22 }, {\"id\"  : \"DB-38406-2350KV\", \"count\" : 4 } ] }"
+				},
+				"url": {
+					"raw": "http://localhost:8090/dronebuzzers/order",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"dronebuzzers",
+						"order"
+					]
+				},
+				"description": "Submit Order"
+			},
+			"response": []
+		},
+		{
+			"name": "get all parts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8090/dronebuzzers/part",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"dronebuzzers",
+						"part"
+					]
+				},
+				"description": "get all parts"
+			},
+			"response": []
+		},
+		{
+			"name": "get parts by category",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8090/dronebuzzers/part/category/Drone",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"dronebuzzers",
+						"part",
+						"category",
+						"Drone"
+					]
+				},
+				"description": "get parts by category"
+			},
+			"response": []
+		},
+		{
+			"name": "get parts by type",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8090/dronebuzzers/part/type/Motor",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"dronebuzzers",
+						"part",
+						"type",
+						"Motor"
+					]
+				},
+				"description": "get parts by type"
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "ddd87fc9-af72-4a20-9f92-3e1bfab62c5c",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "0cee5566-4a53-483f-9939-d37e6eb7eaf6",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
