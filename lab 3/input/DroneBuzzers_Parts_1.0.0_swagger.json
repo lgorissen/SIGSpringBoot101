@@ -1,0 +1,294 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "description" : "DroneBuzzers parts ordering API",
+    "version" : "1.0.0",
+    "title" : "DroneBuzzers parts ordering API",
+    "contact" : {
+      "email" : "luc.gorissen@amis.nl"
+    },
+    "license" : {
+      "name" : "Apache 2.0",
+      "url" : "http://www.apache.org/licenses/LICENSE-2.0.html"
+    }
+  },
+  "tags" : [ {
+    "name" : "parts",
+    "description" : "Part related calls"
+  }, {
+    "name" : "orders",
+    "description" : "Order related calls"
+  } ],
+  "paths" : {
+    "/order" : {
+      "post" : {
+        "tags" : [ "orders" ],
+        "summary" : "order parts",
+        "operationId" : "orderParts",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "order",
+          "description" : "order for drone parts",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/Order"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "OK",
+            "schema" : {
+              "$ref" : "#/definitions/OrderSummary"
+            }
+          },
+          "201" : {
+            "description" : "Created"
+          },
+          "401" : {
+            "description" : "Unauthorized"
+          },
+          "403" : {
+            "description" : "Forbidden"
+          },
+          "404" : {
+            "description" : "Not Found"
+          }
+        }
+      }
+    },
+    "/part" : {
+      "get" : {
+        "tags" : [ "parts" ],
+        "summary" : "get parts",
+        "operationId" : "getParts",
+        "produces" : [ "application/json" ],
+        "responses" : {
+          "200" : {
+            "description" : "OK",
+            "schema" : {
+              "$ref" : "#/definitions/Parts"
+            }
+          },
+          "401" : {
+            "description" : "Unauthorized"
+          },
+          "403" : {
+            "description" : "Forbidden"
+          },
+          "404" : {
+            "description" : "Not Found"
+          }
+        }
+      }
+    },
+    "/part/{id}" : {
+      "get" : {
+        "tags" : [ "parts" ],
+        "summary" : "get part details",
+        "operationId" : "getPart",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "in" : "path",
+          "name" : "id",
+          "description" : "part id",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "OK",
+            "schema" : {
+              "$ref" : "#/definitions/Part"
+            }
+          },
+          "401" : {
+            "description" : "Unauthorized"
+          },
+          "403" : {
+            "description" : "Forbidden"
+          },
+          "404" : {
+            "description" : "Not Found"
+          }
+        }
+      }
+    },
+    "/part/category/{category}" : {
+      "get" : {
+        "tags" : [ "parts" ],
+        "summary" : "get parts by category",
+        "operationId" : "getPartsByCategory",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "in" : "path",
+          "name" : "category",
+          "description" : "category id",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "OK",
+            "schema" : {
+              "$ref" : "#/definitions/Parts"
+            }
+          },
+          "401" : {
+            "description" : "Unauthorized"
+          },
+          "403" : {
+            "description" : "Forbidden"
+          },
+          "404" : {
+            "description" : "Not Found"
+          }
+        }
+      }
+    },
+    "/part/type/{type}" : {
+      "get" : {
+        "tags" : [ "parts" ],
+        "summary" : "get parts by type",
+        "operationId" : "getPartsByType",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "in" : "path",
+          "name" : "type",
+          "description" : "type id",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "OK",
+            "schema" : {
+              "$ref" : "#/definitions/Parts"
+            }
+          },
+          "401" : {
+            "description" : "Unauthorized"
+          },
+          "403" : {
+            "description" : "Forbidden"
+          },
+          "404" : {
+            "description" : "Not Found"
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "Order" : {
+      "type" : "object",
+      "required" : [ "clientId", "clientReference", "orderLines" ],
+      "properties" : {
+        "clientId" : {
+          "type" : "string"
+        },
+        "clientReference" : {
+          "type" : "string"
+        },
+        "orderLines" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/OrderLine"
+          }
+        }
+      }
+    },
+    "OrderLine" : {
+      "type" : "object",
+      "required" : [ "count", "id" ],
+      "properties" : {
+        "count" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "id" : {
+          "type" : "string"
+        }
+      }
+    },
+    "OrderSummary" : {
+      "type" : "object",
+      "required" : [ "clientId", "clientReference", "dbOrderNumber", "orderSummaryLines", "totalAmount" ],
+      "properties" : {
+        "clientId" : {
+          "type" : "string"
+        },
+        "clientReference" : {
+          "type" : "string"
+        },
+        "orderSummaryLines" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/OrderSummaryLine"
+          }
+        },
+        "totalAmount" : {
+          "type" : "number",
+          "format" : "double"
+        }
+      }
+    },
+    "OrderSummaryLine" : {
+      "type" : "object",
+      "required" : [ "count", "part" ],
+      "properties" : {
+        "count" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "part" : {
+          "$ref" : "#/definitions/Part"
+        }
+      }
+    },
+    "Part" : {
+      "type" : "object",
+      "required" : [ "category", "currency", "id", "name", "type", "unitPrice" ],
+      "properties" : {
+        "category" : {
+          "type" : "string"
+        },
+        "currency" : {
+          "type" : "string"
+        },
+        "id" : {
+          "type" : "string"
+        },
+        "name" : {
+          "type" : "string"
+        },
+        "type" : {
+          "type" : "string"
+        },
+        "unitPrice" : {
+          "type" : "number",
+          "format" : "double"
+        }
+      }
+    },
+    "Parts" : {
+      "type" : "object",
+      "required" : [ "parts" ],
+      "properties" : {
+        "parts" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Part"
+          }
+        }
+      }
+    }
+  },
+  "host" : "virtserver.swaggerhub.com",
+  "schemes" : [ "https" ],
+  "basePath" : "/DroneBuzzers/Parts/1.0.0"
+}
