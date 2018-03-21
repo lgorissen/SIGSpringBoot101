@@ -1,0 +1,248 @@
+{
+	"info": {
+		"name": "SigSpringBoot101 - lab 6",
+		"_postman_id": "933bd3b8-4b8c-45b9-a151-29d6bc29132f",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "DroneBuzzers - get parts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8090/DroneBuzzers/Parts/1.0.0/part",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"DroneBuzzers",
+						"Parts",
+						"1.0.0",
+						"part"
+					]
+				},
+				"description": "DroneBuzzers - get parts"
+			},
+			"response": []
+		},
+		{
+			"name": "DroneBuzzers - get part by Id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8090/DroneBuzzers/Parts/1.0.0/part/DB-FK-A250-V4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"DroneBuzzers",
+						"Parts",
+						"1.0.0",
+						"part",
+						"DB-FK-A250-V4"
+					]
+				},
+				"description": "DroneBuzzers - get parts"
+			},
+			"response": []
+		},
+		{
+			"name": "DroneBuzzers - get parts by Category",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8090/DroneBuzzers/Parts/1.0.0/part/category/Drone",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"DroneBuzzers",
+						"Parts",
+						"1.0.0",
+						"part",
+						"category",
+						"Drone"
+					]
+				},
+				"description": "DroneBuzzers - get parts"
+			},
+			"response": []
+		},
+		{
+			"name": "DroneBuzzers - get parts by Type",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8090/DroneBuzzers/Parts/1.0.0/part/type/Frame",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"DroneBuzzers",
+						"Parts",
+						"1.0.0",
+						"part",
+						"type",
+						"Frame"
+					]
+				},
+				"description": "DroneBuzzers - get parts"
+			},
+			"response": []
+		},
+		{
+			"name": "DroneBuzzers - get api-docs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8090//DroneBuzzers/Parts/1.0.0/api-docs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"",
+						"DroneBuzzers",
+						"Parts",
+						"1.0.0",
+						"api-docs"
+					]
+				},
+				"description": "DroneBuzzers - get parts"
+			},
+			"response": []
+		},
+		{
+			"name": "DroneBuzzers - order parts",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"clientId\": \"The Drone Factory\",\n  \"clientReference\": \"TDF-0043-8679\",\n  \"orderLines\": [\n    {\n      \"count\": 1,\n      \"id\": \"DB-FK-A250-V4\"\n    },\n    {\n      \"count\": 4,\n      \"id\": \"DB-38406-2350KV\"\n    },\n    {\n      \"count\": 1,\n      \"id\": \"DB-ESC-629-40A\"\n    },\n    {\n      \"count\": 1,\n      \"id\": \"DB-FC-9773-R\"\n    }\n  ]\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8090/DroneBuzzers/Parts/1.0.0/order",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"DroneBuzzers",
+						"Parts",
+						"1.0.0",
+						"order"
+					]
+				},
+				"description": "DroneBuzzers - get parts"
+			},
+			"response": []
+		},
+		{
+			"name": "DroneBuzzers - get orders",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"clientId\": \"The Drone Factory\",\n  \"clientReference\": \"TDF-0043-8679\",\n  \"orderLines\": [\n    {\n      \"count\": 1,\n      \"id\": \"DB-FK-A250-V4\"\n    },\n    {\n      \"count\": 4,\n      \"id\": \"DB-38406-2350KV\"\n    },\n    {\n      \"count\": 1,\n      \"id\": \"DB-ESC-629-40A\"\n    },\n    {\n      \"count\": 1,\n      \"id\": \"DB-FC-9773-R\"\n    }\n  ]\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8090/DroneBuzzers/Parts/1.0.0/order",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"DroneBuzzers",
+						"Parts",
+						"1.0.0",
+						"order"
+					]
+				},
+				"description": "DroneBuzzers - get parts"
+			},
+			"response": []
+		},
+		{
+			"name": "DroneBuzzers - get order by Id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"clientId\": \"The Drone Factory\",\n  \"clientReference\": \"TDF-0043-8679\",\n  \"orderLines\": [\n    {\n      \"count\": 1,\n      \"id\": \"DB-FK-A250-V4\"\n    },\n    {\n      \"count\": 4,\n      \"id\": \"DB-38406-2350KV\"\n    },\n    {\n      \"count\": 1,\n      \"id\": \"DB-ESC-629-40A\"\n    },\n    {\n      \"count\": 1,\n      \"id\": \"DB-FC-9773-R\"\n    }\n  ]\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8090/DroneBuzzers/Parts/1.0.0/order/DB-00530893",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"DroneBuzzers",
+						"Parts",
+						"1.0.0",
+						"order",
+						"DB-00530893"
+					]
+				},
+				"description": "DroneBuzzers - get parts"
+			},
+			"response": []
+		}
+	]
+}

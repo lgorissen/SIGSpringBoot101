@@ -1,0 +1,15 @@
+INSERT INTO "part" ("id", "category", "currency", "name", "part_id", "type", "unit_price") VALUES
+(1,	'Drone',	'EUR',	'DroneBuzzer Frame Kit regular V4 (2016 edition)',	'DB-FK-A250-V4',	'Frame',	14.65),
+(2,	'Drone',	'EUR',	'DroneBuzzer Frame Kit regular V5 (2017 edition)',	'DB-FK-A250-V5',	'Frame',	19.55),
+(3, 'Drone', 'EUR', 'DroneBuzzer Race Frame Kit version SuperR' , 'DB-FK-R250-SuperR' , 'Frame' , 23.15),
+(4, 'Drone', 'EUR', 'DroneBuzzer regular 2016' , 'DB-38404-2300KV' , 'Motor', 18.95),
+(5, 'Drone', 'EUR', 'DroneBuzzer regular 2017' , 'DB-38406-2350KV' , 'Motor' , 21.95),
+(6, 'Drone', 'EUR', 'DroneBuzzer racer' , 'DB-38608-250500KV' , 'Motor' , 25.95),
+(7, 'Drone', 'EUR', 'DroneBuzzer speedcontoller quadcopter - ESC 2-4S 4x25A' , 'DB-ESC-622-25A' , 'Speedcontroller' ,  32.90),
+(8, 'Drone', 'EUR', 'DroneBuzzer speedcontoller racer - 40A (require 4)' , 'DB-ESC-629-40A' , 'Speedcontroller' , 9.95),
+(9, 'Drone', 'EUR', 'DroneBuzzer flightcontoller racer - 4ch' , 'DB-FC-9773-R' , 'Flightcontroller' , 43.95),
+(10, 'Drone', 'EUR', 'DroneBuzzer flightcontoller regular - 4ch' , 'DB-FC-9773-A' , 'Flightcontroller' , 24.15 ),
+(11, 'Drone', 'EUR', 'DroneBuzzer camera - 16:9 CMOS'  , 'DB-CAM-16:9-fisheye-C960' , 'Camera' , 34.99),
+(12, 'Drone', 'EUR', 'DroneBuzzer regular prop 6 inch - 2 pairs/pack, CW & CCW' , 'DB-PROP-6x4.5-CW/CCW-FIB-001' , 'Props' , 1.05),
+(13, 'Drone', 'EUR', 'DroneBuzzer regular prop 6 inch - 2 pairs/pack, CW & CCW' , 'DB-PROP-6x4-CW/CCW-FIB-002' , 'Props' , 1.15),
+(14, 'Drone', 'EUR', 'DroneBuzzer racing prop 6 inch - 2 pairs/pack, CW & CCW' , 'DB-PROP-6x5-CW/CCW-FIB-RE' , 'Props' , 1.95);
