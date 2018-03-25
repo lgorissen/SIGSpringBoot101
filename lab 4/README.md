@@ -1,10 +1,10 @@
 # Lab 4: REST web service in a Docker container
 
 
-##Goal:
+## Goal:
 In this lab you will run a SpringBoot REST web service in a Docker container
 
-##Steps:
+## Steps:
 - [todo: outline the steps of this lab]
 
 

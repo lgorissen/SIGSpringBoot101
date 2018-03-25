@@ -21,41 +21,50 @@ public class OrderLine {
 	private long id;
 
 	@ManyToOne
-	@JoinColumn (name="order_id")
+	@JoinColumn(name = "order_id")
 	@JsonBackReference
 	private Order order;
-	
-    private int count;
-    private String partId;
-    private String dbOrderNumber;
+
+	private int count;
+	private String partId;
+	private String dbOrderNumber;
 
 	public long getId() {
 		return id;
 	}
+
 	public void setId(long id) {
 		this.id = id;
 	}
+
 	public Order getOrder() {
 		return order;
 	}
+
 	public void setOrder(Order order) {
 		this.order = order;
 	}
+
 	public int getCount() {
 		return count;
 	}
+
 	public void setCount(int count) {
 		this.count = count;
 	}
-    public String getPartId() {
+
+	public String getPartId() {
 		return partId;
 	}
+
 	public void setPartId(String partId) {
 		this.partId = partId;
 	}
+
 	public String getDbOrderNumber() {
 		return dbOrderNumber;
 	}
+
 	public void setDbOrderNumber(String dbOrderNumber) {
 		this.dbOrderNumber = dbOrderNumber;
 	}

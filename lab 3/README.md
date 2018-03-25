@@ -1,11 +1,11 @@
 # Lab 3: REST web service - contract first - SwaggerHub
 
 
-##Goal:
+## Goal:
 In this lab you will use SwaggerHub to generate a SpringBoot REST web service.
 This lab shows how to develop a service using a contract-first approach.
 
-##Steps:
+## Steps:
 - Create a SwaggerHub account
 - Create an API using the sample OpenAPI specification document
 - Configure the code generation settings in SwaggerHub

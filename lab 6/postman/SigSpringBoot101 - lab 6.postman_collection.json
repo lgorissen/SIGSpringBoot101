@@ -1,8 +1,7 @@
 {
 	"info": {
-		"name": "SigSpringBoot101 - lab 6",
 		"_postman_id": "933bd3b8-4b8c-45b9-a151-29d6bc29132f",
-		"description": "",
+		"name": "SigSpringBoot101 - lab 6",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [

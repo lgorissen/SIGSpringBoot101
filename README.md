@@ -1,5 +1,5 @@
-# SIG SpringBoot 101
-This repo contains the labs for the AMIS SIG SpringBoot 101, April 2018
+# SIG Spring Boot 101
+This repo contains the labs for the AMIS SIG Spring Boot 101, April 5th 2018
 
 
 ## Outline:
@@ -26,4 +26,40 @@ The labs will use the following tooling:
 - Postman, curl
 - Oracle DB
 
-An Ubuntu VirtualBox image with this tooling will be provided.
+## Getting started
+
+To get started with the labs, first have a look at the **Lab_start_notes** document: it explains how to set-up the VirtualBox machine.
+
+## Lab structure
+
+In the VirtualBox machine, the labs can be found in directory:]
+
+`/home/developer/projects/SIGSpringBoot101`
+
+The structure of the labs is (example: lab 6):
+
+    dronebuzzers
+    dronebuzzers-completed
+    input
+    Lab_6_notes.docx
+    postman
+    README.md
+
+
+With the contents of the directories:
+
+| Directory             | Contents                                             | 
+|---------------------- |----------------------------------------------------- |
+| dronebuzzers          | The start project for the lab                        |
+| dronebuzzers-completed| The completed end result of the lab                  |
+| input                 | All the code parts and other files needed for the lab|
+| Lab_6_notes.docx      | The lab guide                                        |
+| postman               | A Postman collection for testing the lab results     |
+| README.md             | A MarkDown file that describes the content of the lab|
+
+
+
+
+
+
+
