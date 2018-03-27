@@ -1,0 +1,12 @@
+{
+    "runtime": {
+        "majorVersion": "8"
+    },
+    "command": "java -jar app.jar --server.port=$PORT --server.address=$HOSTNAME",
+    "startupTime": "120",
+    "release": {
+        "build": "n/a",
+        "version": "1.0.0"
+    },
+    "notes": "DroneBuzzers REST API on Oracle Application Container Cloud - Java SE "
+}
