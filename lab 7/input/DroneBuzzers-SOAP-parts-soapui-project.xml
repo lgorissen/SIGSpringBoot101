@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="f6006ba0-4f46-4aee-b492-bc2cf9015fa9" activeEnvironment="Default" name="DroneBuzzers SOAP parts" resourceRoot="" soapui-version="5.4.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="60eb9d90-8503-47e2-b01c-502f7fa940e5" wsaVersion="NONE" name="PartsPortSoap12" type="wsdl" bindingName="{http://dronebuzzers.com/parts/soap}PartsPortSoap12" soapVersion="1_2" anonymous="optional" definition="http://localhost:8080/parts/soap/parts.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:8080/parts/soap/parts.wsdl"><con:part><con:url>http://localhost:8080/parts/soap/parts.wsdl</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://dronebuzzers.com/parts/soap" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:sch="http://dronebuzzers.com/parts/soap" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tns="http://dronebuzzers.com/parts/soap">
+  <wsdl:types>
+    <xs:schema elementFormDefault="qualified" targetNamespace="http://dronebuzzers.com/parts/soap" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="getPartRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="id" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getPartResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="part" type="tns:part"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getPartsRequest">
+        <xs:complexType></xs:complexType>
+      </xs:element>
+      <xs:element name="getPartsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="partList" type="tns:partList"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getPartsByTypeRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="type" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getPartsByTypeResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="partList" type="tns:partList"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:complexType name="part">
+        <xs:sequence>
+          <xs:element name="id" type="xs:string"/>
+          <xs:element name="category" type="xs:string"/>
+          <xs:element name="type" type="xs:string"/>
+          <xs:element name="description" type="xs:string"/>
+          <xs:element name="price" type="xs:double"/>
+          <xs:element name="currency" type="tns:currency"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="partList">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="part" type="tns:part"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:simpleType name="currency">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="USD"/>
+          <xs:enumeration value="EUR"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="getPartsByTypeRequest">
+    <wsdl:part element="tns:getPartsByTypeRequest" name="getPartsByTypeRequest"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getPartsResponse">
+    <wsdl:part element="tns:getPartsResponse" name="getPartsResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getPartsByTypeResponse">
+    <wsdl:part element="tns:getPartsByTypeResponse" name="getPartsByTypeResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getPartsRequest">
+    <wsdl:part element="tns:getPartsRequest" name="getPartsRequest"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getPartResponse">
+    <wsdl:part element="tns:getPartResponse" name="getPartResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getPartRequest">
+    <wsdl:part element="tns:getPartRequest" name="getPartRequest"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="PartsPort">
+    <wsdl:operation name="getPartsByType">
+      <wsdl:input message="tns:getPartsByTypeRequest" name="getPartsByTypeRequest"></wsdl:input>
+      <wsdl:output message="tns:getPartsByTypeResponse" name="getPartsByTypeResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getParts">
+      <wsdl:input message="tns:getPartsRequest" name="getPartsRequest"></wsdl:input>
+      <wsdl:output message="tns:getPartsResponse" name="getPartsResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPart">
+      <wsdl:input message="tns:getPartRequest" name="getPartRequest"></wsdl:input>
+      <wsdl:output message="tns:getPartResponse" name="getPartResponse"></wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="PartsPortSoap12" type="tns:PartsPort">
+    <soap12:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="getPartsByType">
+      <soap12:operation soapAction=""/>
+      <wsdl:input name="getPartsByTypeRequest">
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getPartsByTypeResponse">
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getParts">
+      <soap12:operation soapAction=""/>
+      <wsdl:input name="getPartsRequest">
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getPartsResponse">
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPart">
+      <soap12:operation soapAction=""/>
+      <wsdl:input name="getPartRequest">
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getPartResponse">
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PartsPortService">
+    <wsdl:port binding="tns:PartsPortSoap12" name="PartsPortSoap12">
+      <soap12:address location="http://localhost:8080/parts/soap"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:8080/parts/soap</con:endpoint></con:endpoints><con:operation id="17bc4c8a-1eaf-4063-876e-4430d5739c9c" isOneWay="false" action="" name="getPart" bindingOperationName="getPart" type="Request-Response" outputName="getPartResponse" inputName="getPartRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="49ac680b-bf67-409a-bdd0-bfab5a50da48" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/parts/soap</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:soap1="http://dronebuzzers.com/parts/soap">
+   <soap:Header/>
+   <soap:Body>
+      <soap1:getPartRequest>
+         <soap1:id>DB-FK-A250-V5</soap1:id>
+      </soap1:getPartRequest>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://dronebuzzers.com/parts/soap/PartsPort/getPartRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="2e00a79a-ea09-4f6b-bde0-3909b472d653" isOneWay="false" action="" name="getParts" bindingOperationName="getParts" type="Request-Response" outputName="getPartsResponse" inputName="getPartsRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="237b9781-541a-4ed7-b85a-1013fd4f7ea5" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/parts/soap</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:soap1="http://dronebuzzers.com/parts/soap">
+   <soap:Header/>
+   <soap:Body>
+      <soap1:getPartsRequest/>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://dronebuzzers.com/parts/soap/PartsPort/getPartsRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="e2e4dffb-d524-48d4-8164-c1790be6e3fb" isOneWay="false" action="" name="getPartsByType" bindingOperationName="getPartsByType" type="Request-Response" outputName="getPartsByTypeResponse" inputName="getPartsByTypeRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="6c351948-efc1-4b50-b5ae-3616dfbf02fa" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/parts/soap</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:soap1="http://dronebuzzers.com/parts/soap">
+   <soap:Header/>
+   <soap:Body>
+      <soap1:getPartsByTypeRequest>
+         <soap1:type>Props</soap1:type>
+      </soap1:getPartsByTypeRequest>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://dronebuzzers.com/parts/soap/PartsPort/getPartsByTypeRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>
