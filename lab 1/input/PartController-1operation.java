@@ -15,7 +15,7 @@ import com.dronebuzzers.rest.part.PartsDAO;
 @CrossOrigin
 @RestController
 @RequestMapping("/dronebuzzers/part")
-public class PartsController {
+public class PartController {
 
 	PartsDAO partsDAO = new MockedPartsDAO();
 
