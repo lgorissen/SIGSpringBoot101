@@ -1,11 +1,14 @@
-# Lab 1: REST web service in SpringBoot
+# Lab 1: REST web service in Spring Boot
 
 
-##Goal:
-In this lab you will create your first REST web service in SpringBoot.
+## Goal:
+In this lab you will create your first REST web service in Spring Boot.
 
-##Steps:
-- [todo: outline the steps of this lab]
+## Steps:
+- Create a Spring Boot project in Eclipse STS
+- Configure the service properties
+- Add the first operation to the REST web service
+- ... add more functionality in a couple of steps
 
 
 

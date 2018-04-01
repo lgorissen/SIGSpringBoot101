@@ -7,12 +7,16 @@ This lab shows how to develop a service using a contract-first approach.
 
 ## Steps:
 - Create a SwaggerHub account
-- Create an API using the sample OpenAPI specification document
-- Configure the code generation settings in SwaggerHub
-- Generate the server code for the REST web service in SwaggerHub
-- Add your business logic to the generated service
-- Run the service
-
+- Create a HelloWorld API in SwaggerHub
+    - create API specification in SwaggerHub
+    - generate server code in SwaggerHub
+    - import code into Eclipse STS and add business logic
+    - run and test
+- Create the DroneBuzzers API in SwaggerHub
+    - create API specification in SwaggerHub
+    - generate server code in SwaggerHub
+    - import code into Eclipse STS and add business logic
+    - run and test
 
 
 ```
