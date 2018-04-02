@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "81089590-1e12-4951-934c-a6076a979120",
+		"_postman_id": "62bce395-c248-4915-b80b-4c49f80bd1c0",
 		"name": "SigSpringBoot101 - lab 8",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -15,12 +15,10 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "http://localhost:8090/dronebuzzers/part/DB-FK-A250-V4",
-					"protocol": "http",
+					"raw": "{{DRONEBUZZER_API_ENDPOINT}}/dronebuzzers/part/DB-FK-A250-V4",
 					"host": [
-						"localhost"
+						"{{DRONEBUZZER_API_ENDPOINT}}"
 					],
-					"port": "8090",
 					"path": [
 						"dronebuzzers",
 						"part",
@@ -46,12 +44,10 @@
 					"raw": "{\"clientId\" : \"TDF\", \"clientReference\": \"TDF-0067\", \"orderLines\": [{\"id\" : \"DB-FK-A250-V4\", \"count\" : 22 }, {\"id\"  : \"DB-38406-2350KV\", \"count\" : 4 } ] }"
 				},
 				"url": {
-					"raw": "http://localhost:8090/dronebuzzers/order",
-					"protocol": "http",
+					"raw": "{{DRONEBUZZER_API_ENDPOINT}}/dronebuzzers/order",
 					"host": [
-						"localhost"
+						"{{DRONEBUZZER_API_ENDPOINT}}"
 					],
-					"port": "8090",
 					"path": [
 						"dronebuzzers",
 						"order"
@@ -71,12 +67,10 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "http://localhost:8090/dronebuzzers/part",
-					"protocol": "http",
+					"raw": "{{DRONEBUZZER_API_ENDPOINT}}/dronebuzzers/part",
 					"host": [
-						"localhost"
+						"{{DRONEBUZZER_API_ENDPOINT}}"
 					],
-					"port": "8090",
 					"path": [
 						"dronebuzzers",
 						"part"
@@ -96,12 +90,10 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "http://localhost:8090/dronebuzzers/part/category/Drone",
-					"protocol": "http",
+					"raw": "{{DRONEBUZZER_API_ENDPOINT}}/dronebuzzers/part/category/Drone",
 					"host": [
-						"localhost"
+						"{{DRONEBUZZER_API_ENDPOINT}}"
 					],
-					"port": "8090",
 					"path": [
 						"dronebuzzers",
 						"part",
@@ -123,12 +115,10 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "http://localhost:8090/dronebuzzers/part/type/Motor",
-					"protocol": "http",
+					"raw": "{{DRONEBUZZER_API_ENDPOINT}}/dronebuzzers/part/type/Motor",
 					"host": [
-						"localhost"
+						"{{DRONEBUZZER_API_ENDPOINT}}"
 					],
-					"port": "8090",
 					"path": [
 						"dronebuzzers",
 						"part",
