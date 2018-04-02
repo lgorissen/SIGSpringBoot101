@@ -1,11 +1,18 @@
-# Lab 7: Create a SOAP web service in SpringBoot
+# Lab 7: Create a SOAP web service in Spring Boot
 
 
-##Goal:
-In this lab you will create a SOAP web service using SpringBoot.
+## Goal:
+In this lab you will create a SOAP web service using Spring Boot.
 
-##Steps:
-- [todo: outline the steps of this lab]
+## Steps:
+- Create a project and corresponding Maven pom file
+- Create XML schema's for the messages
+- Create Java classes from XML schema's using JAXB
+- Create a repository
+- Create and configure the web service endpoint
+- Configure the web service
+- Create a runnable application
+- Run and Test the service
 
 
 
